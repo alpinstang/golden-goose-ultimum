@@ -22,6 +22,30 @@
       padding: 10px 15px;
       text-decoration: none;
       color: #000;
+      cursor: pointer;
     }
+  }
+
+  .image-holder {
+    position: relative;
+    width: 992px;
+    height: 125px; /*dimensions of image*/
+  }
+  .image-holder .image,
+  .image-holder .text {
+    transition: opacity 0.5s ease-in-out;
+  }
+  .image-holder .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .image-holder:hover .image {
+    opacity: 0;
+  }
+  .image-holder:hover .text {
+    opacity: 1;
   }
 }
