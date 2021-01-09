@@ -11,7 +11,7 @@ class SignIn extends React.Component {
     this.state = { email: '', password: '' };
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     this.setState({ email: '', password: '' });
   };
@@ -24,9 +24,9 @@ class SignIn extends React.Component {
   render() {
     return (
       <div className="sign-in">
-        <h2>I already have an accout</h2>
+        <h2 className="title">I already have an accout</h2>
         <span>Sign in with your email and password</span>
-        <form onSubmit={this.handleSubmit}>
+        <form className="sign-in-form" onSubmit={this.handleSubmit}>
           <FormInput
             handleChange={this.handleChange}
             name="email"
